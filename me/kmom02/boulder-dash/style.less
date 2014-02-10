@@ -1,0 +1,38 @@
+/* Import base style *****************************************/
+
+@import "../mall/base.less";
+
+/* Here I will put specific styles for a certain test program */
+
+@tile-size:32px;
+@tile-offset:34px;
+#flash{width:@tile-size*24;height:@tile-size*24;}
+#b1{position:absolute;}
+ 
+.baddie{z-index:10;width:@tile-size;height:@tile-size;background-image:url(img/tiles1.png);background-repeat:no-repeat;
+  .transition-property(e('left,top'));.transition-duration(0.2s);.transition-timing-function(ease);
+  &.up{background-position:-@tile-offset*3 0;}
+  &.down{background-position:-@tile-offset*2 0;}
+  &.left{background-position:-@tile-offset*1 0;}
+  &.right{background-position:0 0;}
+}
+
+.tile, .t, .block, .b {width:@tile-size;height:@tile-size;float:left;background-repeat:no-repeat;}
+.t12 {background-image:url(img/floor/grass0.png);}
+.t13 {background-image:url(img/floor/grass_flowers_yellow2.png);}
+.t14 {background-image:url(img/floor/grass_flowers_red3.png);}
+.t15 {background-image:url(img/floor/grass_flowers_blue1.png);}
+.t21 {background-image:url(img/floor/dirt1.png);}
+.t22 {background-image:url(img/floor/dirt_ne.png);}
+.t23 {background-image:url(img/floor/dirt_se.png);}
+
+.b11 {background-image:url(img/wall/brick_dark1.png);}
+.b12 {background-image:url(img/wall/brick_dark3.png);}
+.b13 {background-image:url(img/wall/brick_dark4.png);}
+.b14 {background-image:url(img/wall/brick_dark5.png);}
+.b15 {background-image:url(img/wall/marble_wall9.png);}
+.b16 {background-image:url(img/wall/marble_wall10.png);}
+.b17 {background-image:url(img/wall/marble_wall11.png);}
+.b18 {background-image:url(img/wall/marble_wall12.png);}
+.b19 {background-image:url(img/dngn_enter_dis.png);}
+
